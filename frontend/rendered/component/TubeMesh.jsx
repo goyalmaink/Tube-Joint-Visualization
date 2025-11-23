@@ -9,8 +9,11 @@ export function TubeMesh({ data }) {
 
     const isSelected = selectedId === data.id;
 
+    const meshKey = `${width}-${height}-${length}`;
+
     return (
         <mesh
+            key={meshKey}
             position={data.position}
             rotation={data.rotation}
             onClick={(e) => {
